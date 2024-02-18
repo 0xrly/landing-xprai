@@ -48,7 +48,7 @@ export const NavbarComponent = () => {
             <Image
               className='mb-4'
               src='/logo.jpg'
-              alt='Logo'
+              alt='Logo Image'
               width={35}
               height={35}
             />
