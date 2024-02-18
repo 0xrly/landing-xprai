@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { siteConfig } from '@/config/site'
 
 import { Providers } from './providers'
-import { NavbarComponent } from '@/components/Navbar'
+import { NavbarComponent } from '@/components/NavbarComponent'
 
 import clsx from 'clsx'
 import { roboto_mono } from '@/fonts/fonts'
