@@ -1,51 +1,37 @@
-import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code"
-import { button as buttonStyles } from "@nextui-org/theme";
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { Link } from '@nextui-org/link'
+import { Snippet } from '@nextui-org/snippet'
+import { Code } from '@nextui-org/code'
+import { button as buttonStyles } from '@nextui-org/theme'
+import { siteConfig } from '@/config/site'
+import { title, subtitle } from '@/components/primitives'
+import { GithubIcon } from '@/components/icons'
+import { url } from 'inspector'
+import { Hero } from '@/components/Hero'
+import { Products } from '@/components/Products'
+import { DividerComponent } from '@/components/DividerComponent'
+import { Blog } from '@/components/Blog'
 
 export default function Home() {
-	return (
-		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-				<br />
-				<h1 className={title()}>
-					websites regardless of your design experience.
-				</h1>
-				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
-				</h2>
-			</div>
+  return (
+    <section className='flex w-full flex-col items-center justify-center  gap-4 py-8 md:py-10'>
+      <div className='inline-block max-w-lg text-center justify-center'>
+        <h1 className={title()}>Fast and easy</h1>
+        <br />
+        <h1 className={title({ color: 'violet' })}>AI for your</h1>
+        <br />
+        <h1 className={title()}>everyday life</h1>
+        <h2 className={subtitle({ class: 'mt-4' })}>
+          We build useful and modern applications that use artificial
+          intelligence
+        </h2>
+        <h1 className={title({ color: 'violet' })}>&lt;/&gt;</h1>
+      </div>
 
-			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-				>
-					Documentation
-				</Link>
-				<Link
-					isExternal
-					className={buttonStyles({ variant: "bordered", radius: "full" })}
-					href={siteConfig.links.github}
-				>
-					<GithubIcon size={20} />
-					GitHub
-				</Link>
-			</div>
-
-			<div className="mt-8">
-				<Snippet hideSymbol hideCopyButton variant="flat">
-					<span>
-						Get started by editing <Code color="primary">app/page.tsx</Code>
-					</span>
-				</Snippet>
-			</div>
-		</section>
-	);
+      <Hero />
+      <DividerComponent />
+      <Products />
+      <DividerComponent />
+      <Blog />
+    </section>
+  )
 }
